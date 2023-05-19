@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* ボタンのスタイル */
+    .my-button {
+      background-color: #4CAF50; /* ボタンの背景色 */
+      color: white; /* ボタンのテキスト色 */
+      border: none; /* ボタンのボーダーなし */
+      padding: 10px 20px; /* ボタンの余白 */
+      text-align: center; /* テキストを中央に揃える */
+      text-decoration: none; /* リンクの下線なし */
+      display: inline-block; /* ボタンをインライン表示 */
+      font-size: 16px; /* テキストのフォントサイズ */
+      margin: 4px 2px; /* ボタンのマージン */
+      cursor: pointer; /* カーソルをポインターに変更 */
+      border-radius: 8px; /* ボタンの角を丸くする */
+    }
+  </style>
+</head>
+<body>
+  <p id="text">初期のテキスト</p>
+  <button class="my-button" onclick="changeText()">クリックしてテキストを変更</button>
+
+  <script>
+    var texts = ["テキスト1", "テキスト2", "テキスト3"]; // 切り替えるテキストの配列
+    var index = 0; // 配列のインデックス
+
+    function changeText() {
+      document.getElementById("text").innerHTML = texts[index]; // インデックスに応じたテキストを表示
+      index = (index + 1) % texts.length; // インデックスを更新し、範囲内に制限
+    }
+  </script>
+</body>
+</html>
