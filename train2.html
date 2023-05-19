@@ -24,12 +24,8 @@
   <button class="my-button" onclick="changeText()">クリックしてテキストを変更</button>
 
   <script>
-    var texts = ["テキスト1", "テキスト2", "テキスト3"]; // 切り替えるテキストの配列
-    var index = 0; // 配列のインデックス
-
     function changeText() {
-      document.getElementById("text").innerHTML = texts[index]; // インデックスに応じたテキストを表示
-      index = (index + 1) % texts.length; // インデックスを更新し、範囲内に制限
+      document.getElementById("text").innerHTML = "変更後のテキスト";
     }
   </script>
 </body>
